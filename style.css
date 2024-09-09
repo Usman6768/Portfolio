@@ -214,10 +214,13 @@ span{
     font-size: 34px;
     font-weight: 600;
     min-width: 280px;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow text */
 }
 
 .text-animation span{
     position: relative;
+    display: inline-block; /* Ensure the span doesn’t affect layout */
 }
 
 .text-animation span::before{
@@ -365,11 +368,12 @@ span{
 .timeline-content{
     background-color: var(--bg-color);
     border: 3px solid var(--main-color);
-    padding: 30px 50px;
+    padding: 50px 50px;
     border-radius: 4rem;
     box-shadow: 0 0 10px var(--main-color);
     cursor: pointer;
     transition: 0.3s ease-in-out;
+    text-align: left;
 }
 
 .timeline-content:hover{
@@ -381,7 +385,7 @@ span{
     font-size: 20px;
     color: white;
     margin: 0 0 10px;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .timeline-content p{
